@@ -1,6 +1,5 @@
 class PagesController < ActionController::Base
   def index
-    @grandma = params[:grandma]
   end
 
   def grandma
