@@ -8,10 +8,16 @@ When creating a `rails new` application:
 -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and jquery-ujs (unobtrusive javascript) functionality.
   
 ##Getting Started
--  We are going to start from a Deaf Grandma application that has been formatted to use partials.  
+-  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials.  
 -  *****Explain the route and pages_controller
 
 ##Forms
+-  Modify the `_form.html.erb` partial using the rails rails `form_tag`
+            <%= form_tag("/grandma", method: "post") do %>
+              Say something to Grandma:</br>
+              <%= text_field_tag :user_input %>
+              <%= submit_tag("Send Message") %>
+            <% end %>
 
 ##Resources
 -  [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
