@@ -5,7 +5,7 @@ Team: Jimmy, Dan, Luisa, Chae
 ##Out of the Box
 When creating a `rails new` application:
   -  `jquery-rails` gem will automatically be provided in the gemfile.
-  -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and ajax functionality (jquery-ujs).
+  -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and jquery-ujs functionality.
   
 ##JQuery
 
