@@ -16,3 +16,4 @@ When creating a `rails new` application:
 -  [RailsCasts #136](http://railscasts.com/episodes/136-jquery-ajax-revised)
 -  [Phase 3 Research from dontmitch](https://github.com/dontmitch/intro_to_rails/blob/master/Guides/7_jquery_and_ajax.md)
 -  [JQuery-ujs](https://github.com/rails/jquery-ujs/wiki/ajax)
+-  [Remote Links and Forms](http://www.alfajango.com/blog/rails-3-remote-links-and-forms/)
