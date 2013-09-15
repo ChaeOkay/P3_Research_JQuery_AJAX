@@ -13,11 +13,12 @@ When creating a `rails new` application:
 
 ##Forms
 -  Modify the `_form.html.erb` partial using the rails rails `form_tag`
-            <%= form_tag("/grandma", method: "post") do %>
-              Say something to Grandma:</br>
-              <%= text_field_tag :user_input %>
-              <%= submit_tag("Send Message") %>
-            <% end %>
+
+                <%= form_tag("/grandma", method: "post") do %>
+                  Say something to Grandma:</br>
+                  <%= text_field_tag :user_input %>
+                  <%= submit_tag("Send Message") %>
+                <% end %>
 
 ##Resources
 -  [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
