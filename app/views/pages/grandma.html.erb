@@ -1,9 +1,13 @@
 <div class="container">
-  <%= render "form" %>
-</div>
+  <h1>Deaf Grandma</h1>
 
-<div class="container">
-  <% if @msg %>
-    <p>Grandma says: "<span id="grandma_says"><%= @msg %></span>"</p>
-  <% end %>
+  <div class="container">
+    <%= render "form" %>
+  </div>
+
+  <div class="container">
+    <% if @msg %>
+      <p>Grandma says: "<span id="grandma_says"><%= @msg %></span>"</p>
+    <% end %>
+  </div>
 </div>
