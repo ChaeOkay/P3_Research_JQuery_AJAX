@@ -4,8 +4,8 @@ Team: Jimmy, Dan, Luisa, Chae
 
 ##Out of the Box
 When creating a `rails new` application:
-  -  `jquery-rails` gem will automatically be provided in the gemfile (line 23)
-  -  `app_root/app/assets/javascripts/application.js` will automatically require jquery (lines 13/14)
+  -  `jquery-rails` gem will automatically be provided in the gemfile.
+  -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and ajax functionality (jquery-ujs).
   
 ##JQuery
 
@@ -13,3 +13,6 @@ When creating a `rails new` application:
 
 ##Resources
 [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
+[RailsCasts #136](http://railscasts.com/episodes/136-jquery-ajax-revised)
+[Phase 3 Research from dontmitch](https://github.com/dontmitch/intro_to_rails/blob/master/Guides/7_jquery_and_ajax.md)
+[JQuery-ujs](https://github.com/rails/jquery-ujs/wiki/ajax)
