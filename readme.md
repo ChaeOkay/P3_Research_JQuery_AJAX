@@ -11,6 +11,9 @@ When creating a `rails new` application:
 
 ##AJAX
 
+##Teminology
+  -  ujs (Unobtrusive JavaScript)
+
 ##Resources
 -  [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
 -  [RailsCasts #136](http://railscasts.com/episodes/136-jquery-ajax-revised)
