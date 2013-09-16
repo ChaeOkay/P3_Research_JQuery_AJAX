@@ -6,19 +6,24 @@ Team: Jimmy, Dan, Luisa, Chae
 When creating a `rails new` application:
 -  `jquery-rails` gem will automatically be provided in the gemfile.
 -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and jquery-ujs (unobtrusive javascript) functionality.
-  
+
 ##Getting Started
--  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials.  
--  *****Explain the route and pages_controller
+-  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials.
+
+##Setup
+-  Added ruby link tags in index, see lines 5-7
+
+##Routes
+-  Added resource pages to match pages controller
+-  ran rake routes
+-  added empty controller for page#new to match route being used
+
+##Links
+-  On the Index view, added remote to link
+-  Created new.js.erb with javascript functions
 
 ##Forms
--  Modify the `_form.html.erb` partial using the rails rails `form_tag`
 
-                <%= form_tag("/grandma", method: "post") do %>
-                  Say something to Grandma:</br>
-                  <%= text_field_tag :user_input %>
-                  <%= submit_tag("Send Message") %>
-                <% end %>
 
 ##Resources
 -  [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
