@@ -19,7 +19,7 @@ Team: Jimmy, Dan, Luisa, Chae
 
 - (in index.html.erb)
 - 'link_to' creates an '< a href >' tag. This link will show the `new.html.erb` view. Run `rake routes` for more information. 
-- add 'remote:true': this tells Rails that we want to prevent the default and that we'll have an ajax event
+- add 'remote: true': this tells Rails that we want to prevent the default and that we'll have an ajax event
 - create file 'new.js.erb' and add the following code:
 
         $('#show_form').html('<%= escape_javascript(render :partial => "form") %>')
@@ -28,8 +28,10 @@ Team: Jimmy, Dan, Luisa, Chae
 ##Creating the Form
 
 - (in form.html.erb)
-- we bind the click event "Say it!" and include 'remote:true' again
-- use 'form_tag' in cases when we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
+- include 'remote: true' in the parameters
+- we use 'form_tag' in cases when we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
+- create file `show.js.erb` and add the following code:
+- 
 - call .bind() on our form with id #grandma_form. When ajax is successful, we'll replace our div '#show_response' with our response partial. 
         - note that 'j'=== 'escape_javascript' : both methods let us escape JS
         - '/show' is our route that tells us which page will be shown
