@@ -59,6 +59,28 @@ quotes or other characters that don't jibe with JS syntax.
 
 ##Forms
 
+form_for is a helper that assists with writing forms. form_for takes a :remote option. It works like this:
+
+        <%= form_for(@post, remote: true) do |f| %>
+          ...
+        <% end %>
+
+This will generate the following HTML:
+
+        <form accept-charset="UTF-8" action="/posts" class="new_post" data-remote="true" id="new_post" method="post">
+          ...
+        </form>
+        
+Note the data-remote='true'. Now, the form will be submitted by Ajax rather than by the browser's normal submit mechanism.
+
+You probably don't want to just sit there with a filled out <form>, though. You probably want to do something upon a successful submission. To do that, bind to the ajax:success event. On failure, use ajax:error. Check it out:
+
+        $(document).ready ->
+          $("#new_post").on("ajax:success", (e, data, status, xhr) ->
+            $("#new_post").append xhr.responseText
+          ).bind "ajax:error", (e, xhr, status, error) ->
+            $("#new_post").append "<p>ERROR</p>"
+
 
 ##Resources
 -  [DaringFireball Markdown](http://daringfireball.net/projects/markdown/syntax#link)
