@@ -2,62 +2,38 @@
 ####Phase 3 Research
 Team: Jimmy, Dan, Luisa, Chae
 
-##Out of the Box
-When creating a `rails new` application:
--  `jquery-rails` gem will automatically be provided in the gemfile.
--  `app_root/app/assets/javascripts/application.js` will automatically require jquery and jquery-ujs (unobtrusive javascript) functionality.
-
 ##Getting Started
 -  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials and a page resource.
 
-##Terminology
 
--  Unobstrusive JS: Instead of writing inline JS, the Rails convention is to separate concerns and separate JS out from HTML. 
+##Setup
 
-##Processing the Server Response
+- using Rails 3.2.11
+- in Gemfile : 'gem 'jquery-rails' (already included when creating new rails app)
+- in application.js (i.e. 'manifest file') : automatically generated asset pipeline (looks like it's commented out but it's running). 
+        -Note that 'require_tree' loads all js files included in the directory
+- in index.html.erb: include links and script tag to load JS
 
-The respond_to block in the controller lets us route Ajax requests for different data types. In the following (shortened) example from the [Ruby Guides](http://guides.rubyonrails.org/working_with_javascript_in_rails.html),
-an index page's bottom portion provides a form for creating a new user. The form uses Ajax to call the 'create' action on the Users controller. This requires us to set the form's remote option to 'true' in the index view (app/views/users/index.html.erb). 
+##Creating a link
 
-        <%= form_for (@user, remote: true) do |f| %>
-           <%= f.label :name %><br>
-           <%= f.text_field :name %>
-           <%  f.submit %>
-        <% end %>
+- in index.html.erb : 
+        - 'link_to' creates an <a href> tag 
+        - add 'remote:true': tells Rails that we want to prevent the default and that we'll have an ajax event
+        
+- in pages.js:
+        - we add html to our #show_form <div>. We're escaping JS and rendering a partial called "form"
 
+##Creating the Form
 
-The respond_to block in the 'create' method (in app/controllers/user_controller.rb) could look something like:
+- in form.html.erb:
+        - We bind the click event "Say it!", 
+        - include remote:true in the form as well
+        - use 'form_tag' because we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
+        - .bind() on form with id #grandma_form. When ajax is successful, we'll replace our show_response div with our response partial. 
+        - j() === 'escape_javascript' : both methods let us escape JS
+        - '/show' is our route that tells us which page will be shown
 
-
-        def create
-
-         @user = User.new(params[:user])
-
-           respond_to do |format|
-                format.html { redirect_to @user }
-                format.js   {}
-           end
-        end
-
-
-Note that only one of the lines 38 or 39 is executed, depending on the request. If the request is Ajax, 
-Rails calls a '.js.erb' file with the same name as the method/action, (i.e., create.js.erb). A '.js.erb' file allow us to mix JS and 
-erb in order to perform actions on the current page. So if the index method handles the ajax update, 
-the raw JS goes in the index.js.erb. Since in this example, the create method handles the update, our JS will go into the 
-file app/views/users/create.js.erb. It will contain something like the following:
-
-        $("<%= escape_javascript(render @user) %>").appendTo("#users");
-
-(As a side note, you may be wondering about what 'escape_javascript' is doing. It's actually a view helper method that ensures that the string returned will not "break" the JS with
-quotes or other characters that don't jibe with JS syntax.) 
-
-
-
-##Links
--  On the Index view, added remote to link
--  Created new.js.erb with javascript functions
-
-##Forms
+##More Notes on Forms
 
 form_for is a helper that assists with writing forms. form_for takes a :remote option. It works like this:
 
