@@ -18,9 +18,10 @@ Team: Jimmy, Dan, Luisa, Chae
 ##Creating a link
 
 - (in index.html.erb)
-- 'link_to' creates an '< a href >' tag 
+- 'link_to' creates an '< a href >' tag. This link will show the `new.html.erb` view. Run `rake routes` for more information. 
 - add 'remote:true': this tells Rails that we want to prevent the default and that we'll have an ajax event
-        
+- create file 'new.js.erb' and add the following code:
+
 - (in pages.js)
 - add html to our #show_form <div>. We're escaping JS and rendering a partial called "form"
 
