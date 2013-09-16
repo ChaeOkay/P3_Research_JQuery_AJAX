@@ -9,28 +9,28 @@ Team: Jimmy, Dan, Luisa, Chae
 ##Setup
 
 - using Rails 3.2.11
-- in Gemfile : 'gem 'jquery-rails' (already included when creating new rails app)
-- in application.js (i.e. 'manifest file') : automatically generated asset pipeline (looks like it's commented out but it's running). 
-        -Note that 'require_tree' loads all js files included in the directory
+- in Gemfile : make sure that gem 'jquery-rails' is included (it should already by included when you create a new rails app)
+- in application.js (i.e. "the manifest file") : automatically generated asset pipeline (looks like it's commented out but it's running). 
+         
+   - Note that 'require_tree' loads all js files included in the directory
 - in index.html.erb: include links and script tag to load JS
 
 ##Creating a link
 
-- in index.html.erb : 
-        - 'link_to' creates an <a href> tag 
-        - add 'remote:true': tells Rails that we want to prevent the default and that we'll have an ajax event
+- (in index.html.erb)
+- 'link_to' creates an '< a href >' tag 
+- add 'remote:true': this tells Rails that we want to prevent the default and that we'll have an ajax event
         
-- in pages.js:
-        - we add html to our #show_form <div>. We're escaping JS and rendering a partial called "form"
+- (in pages.js)
+- add html to our #show_form <div>. We're escaping JS and rendering a partial called "form"
 
 ##Creating the Form
 
-- in form.html.erb:
-        - We bind the click event "Say it!", 
-        - include remote:true in the form as well
-        - use 'form_tag' because we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
-        - .bind() on form with id #grandma_form. When ajax is successful, we'll replace our show_response div with our response partial. 
-        - j() === 'escape_javascript' : both methods let us escape JS
+- (in form.html.erb)
+- we bind the click event "Say it!" and include 'remote:true' again
+- use 'form_tag' in cases when we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
+- call .bind() on our form with id #grandma_form. When ajax is successful, we'll replace our div '#show_response' with our response partial. 
+        - note that 'j'=== 'escape_javascript' : both methods let us escape JS
         - '/show' is our route that tells us which page will be shown
 
 ##More Notes on Forms
