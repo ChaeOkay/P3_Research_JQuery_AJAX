@@ -1,5 +1,18 @@
-<div class="container">
-  <h1>Deaf Grandma</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <%= link_to "New Page", new_page_path, id: "form_link", remote: true %>
-</div>
+  <body>
+  <div class="container">
+    <h1>Deaf Grandma</h1>
+
+    <%= link_to "New Page", new_page_path, id: "form_link", remote: true %>
+
+  </div>
+  </body>
+</html>
