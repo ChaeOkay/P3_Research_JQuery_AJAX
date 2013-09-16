@@ -1,7 +1,8 @@
 LearningRails::Application.routes.draw do
+  resources :pages
+  root to:  'pages#index'
 
-  get '/' => 'pages#index'
-  post '/grandma' => 'pages#grandma'
+  post '/show' => 'pages#show'
 
 end
   # The priority is based upon order of creation:
