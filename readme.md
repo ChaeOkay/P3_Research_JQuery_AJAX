@@ -41,8 +41,10 @@ The respond_to block in the 'create' method (in app/controllers/user_controller.
 
 
 Note that only one of the lines 38 or 39 is executed, depending on the request. If the request is Ajax, 
-Rails calls a '.js.erb' file with the same name as the action, (i.e., create.js.erb). A '.js.erb' file allow us to mix JS and 
-erb in order to perform actions on the current page. In this example, the file in app/views/users/create.js.erb contains the following:
+Rails calls a '.js.erb' file with the same name as the method/action, (i.e., create.js.erb). A '.js.erb' file allow us to mix JS and 
+erb in order to perform actions on the current page. So if the index method handles the ajax update, 
+the raw JS goes in the index.js.erb. Since in this example, the create method handles the update, our JS will go into the 
+file app/views/users/create.js.erb. It will contain something like the following:
 
         $("<%= escape_javascript(render @user) %>").appendTo("#users");
 
