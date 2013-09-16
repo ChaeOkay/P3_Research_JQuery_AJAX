@@ -1,13 +1,5 @@
-<form action="/grandma" method="post">
-  Say something to Grandma:
-  <br>
-  <input type="text" name="user_input">
-  <input type="submit" value="Say it!">
-</form>
-
-
-  <%= form_tag("/grandma", method: "post") do %>
-    Say something to Grandma:
+<%= form_tag("/", method: "post") do %>
+    Say something to Grandma: </br>
     <%= text_field_tag :user_input %>
     <%= submit_tag("Send Message") %>
   <% end %>

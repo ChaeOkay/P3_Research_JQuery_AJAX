@@ -6,4 +6,8 @@ class PagesController < ActionController::Base
     response = params[:user_input]
     @msg = response == response.upcase ? "NOT SINCE 1983" : "SPEAK UP SONNY"
   end
+
+  def new
+    render :new
+  end
 end

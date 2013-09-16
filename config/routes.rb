@@ -1,5 +1,5 @@
 LearningRails::Application.routes.draw do
-  resources :messages
+  resources :pages
 
   root to:  'pages#index'
 
