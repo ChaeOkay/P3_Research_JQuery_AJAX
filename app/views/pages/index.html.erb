@@ -1,7 +1,17 @@
-<div class="container">
-  <h1>Deaf Grandma</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box</title>
+  </head>
 
+  <body>
   <div class="container">
-    <%= render "form" %>
+    <h1>Deaf Grandma</h1>
+
+    <%= link_to "Talk to Grandma", new_page_path, id: "form_link" %>
+
+    <div id="show_response">
+    </div>
   </div>
-</div>
+  </body>
+</html>
