@@ -4,3 +4,11 @@
   <input type="text" name="user_input">
   <input type="submit" value="Say it!">
 </form>
+
+
+  <%= form_tag("/grandma", method: "post") do %>
+    Say something to Grandma:
+    <%= text_field_tag :user_input %>
+    <%= submit_tag("Send Message") %>
+  <% end %>
+</div>

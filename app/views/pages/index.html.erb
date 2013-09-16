@@ -1,7 +1,5 @@
 <div class="container">
   <h1>Deaf Grandma</h1>
 
-  <div class="container">
-    <%= render "form" %>
-  </div>
+  <%= link_to "New Message", new_message_path, id: "form", remote: true %>
 </div>

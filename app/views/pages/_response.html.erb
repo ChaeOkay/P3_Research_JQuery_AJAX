@@ -1,12 +1,3 @@
-<div class="container">
-  <h1>Deaf Grandma</h1>
   <% if @grandma %>
     <p>Grandma says: "<span id="grandma_says"><%= @grandma %></span>"</p>
   <% end %>
-
-  <%= form_tag("/grandma", method: "post") do %>
-    Say something to Grandma:
-    <%= text_field_tag :user_input %>
-    <%= submit_tag("Send Message") %>
-  <% end %>
-</div>
