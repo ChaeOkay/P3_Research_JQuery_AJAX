@@ -16,7 +16,7 @@ When creating a `rails new` application:
 
 ##Processing the Server Response
 
-- the respond_to method in the controller allows you to route an Ajax request for different data types. In the following (shortened) example from the Ruby Guides, the top portion
+The respond_to method in the controller allows you to route an Ajax request for different data types. In the following (shortened) example from the [Ruby Guides](http://guides.rubyonrails.org/working_with_javascript_in_rails.html), the top portion
 of an index page displays a list of users, while the bottom portion provides a form to create a new user. The form calls the 'create' action on the Users controller. 
 This Ajax call requires the form's remote option to be set to 'true' in the index view (app/views/users/index.html.erb). The view might look something like this:
 
