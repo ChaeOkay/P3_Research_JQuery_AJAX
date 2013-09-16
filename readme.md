@@ -31,10 +31,14 @@ Team: Jimmy, Dan, Luisa, Chae
 - include 'remote: true' in the parameters
 - we use 'form_tag' in cases when we're not manipulating our models. If we were, we would use 'form_for' and pass in an instance variable. 
 - create file `show.js.erb` and add the following code:
-- 
-- call .bind() on our form with id #grandma_form. When ajax is successful, we'll replace our div '#show_response' with our response partial. 
-        - note that 'j'=== 'escape_javascript' : both methods let us escape JS
-        - '/show' is our route that tells us which page will be shown
+
+        $('#grandma_form').bind('ajax:success', function(){
+          $('#show_response').html('<%= j (render :partial => "response") %>')
+        })
+
+- we're calling .bind() on our form with id #grandma_form. When the ajax call is successful, we'll replace our div '#show_response' with our response partial. 
+        - note that 'j' and 'escape_javascript' are aliases. Both methods let us escape JS.
+  
 
 ##More Notes on Forms
 
