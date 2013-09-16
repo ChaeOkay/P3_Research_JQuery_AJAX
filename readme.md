@@ -8,15 +8,7 @@ When creating a `rails new` application:
 -  `app_root/app/assets/javascripts/application.js` will automatically require jquery and jquery-ujs (unobtrusive javascript) functionality.
 
 ##Getting Started
--  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials.
-
-##Setup
--  Added ruby link tags in index, see lines 5-7
-
-##Routes
--  Added resource pages to match pages controller
--  ran rake routes
--  added empty controller for page#new to match route being used
+-  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials and a page resource.
 
 ##Links
 -  On the Index view, added remote to link
