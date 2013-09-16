@@ -1,4 +1,4 @@
-<%= form_tag("/pages", method: "get") do %>
+<%= form_tag(  {action: :show}, method: "post", remote: true) do %>
     Say something to Grandma: </br>
     <%= text_field_tag :user_input %>
     <%= submit_tag("Send Message") %>
