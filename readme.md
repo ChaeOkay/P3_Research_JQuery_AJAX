@@ -10,6 +10,10 @@ When creating a `rails new` application:
 ##Getting Started
 -  Building from Rails-The-Sinatra-Way by Keith Tom, we are going to start from a Deaf Grandma application that has been formatted to use partials and a page resource.
 
+##Terminology
+
+-Unobstrusive JS: Instead of writing inline JS, the Rails convention is to separate concerns and separate JS out from HTML. 
+
 ##Links
 -  On the Index view, added remote to link
 -  Created new.js.erb with javascript functions
