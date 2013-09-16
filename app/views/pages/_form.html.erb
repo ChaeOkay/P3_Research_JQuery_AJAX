@@ -1,6 +1,5 @@
-<form action="/show" method="post">
-  Say something to Grandma:
-  <br>
-  <input type="text" name="user_input">
-  <input type="submit" value="Say it!">
-</form>
+<%= form_tag('/show', id: "grandma_form", remote: true) do %>
+  Say something to Grandma: </br>
+  <%= text_field_tag :user_input %>
+  <%= submit_tag("Say it!") %>
+  <% end %>

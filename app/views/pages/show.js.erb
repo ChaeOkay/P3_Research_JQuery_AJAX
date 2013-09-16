@@ -1,0 +1,3 @@
+$('#grandma_form').bind('ajax:success', function(){
+  $('#show_response').html('<%= j (render :partial => "response") %>')
+})

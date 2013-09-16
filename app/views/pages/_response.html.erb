@@ -1,5 +1,3 @@
 <% if @msg %>
     <p>Grandma says: "<span id="grandma_says"><%= @msg %></span>"</p>
 <% end %>
-
-<%= link_to "Talk to Grandma", new_page_path, id: "form_link", remote: true %>
