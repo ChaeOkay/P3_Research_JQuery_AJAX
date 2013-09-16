@@ -1,9 +1,4 @@
 class PagesController < ActionController::Base
-  def index
-  end
-
-  def new
-  end
 
   def show
     response = params[:user_input]
